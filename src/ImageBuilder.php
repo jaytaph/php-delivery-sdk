@@ -223,6 +223,18 @@ class ImageBuilder
     }
 
     /**
+     * @param int $height
+     * @param int $width
+     * @return ImageBuilder
+     */
+    public function boxed(int $height, int $width): self
+    {
+        $this->filters[] = sprintf('boxed(%d,%d)', $height, $width);
+
+        return $this;
+    }
+
+    /**
      * Returns the actual URL to the image.
      *
      * @return string

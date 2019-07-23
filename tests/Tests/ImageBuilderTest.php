@@ -68,9 +68,10 @@ class ImageBuilderTest extends TestCase
             ->negate()
             ->rotate(90)
             ->width(100)
+            ->boxed(25, 30)
             ->getSourceUrl()
         ;
 
-        $this->assertEquals('https://assets.seams-cms.com/p/blur/colorize(1,2,3,4)/crop(bottom,100,100)/cropsides/flip(both)/gray/height(100)/negate/rotate(90)/width(100)/workspace/image.jpg', $src);
+        $this->assertEquals('https://assets.seams-cms.com/p/blur/boxed(25,30)/colorize(1,2,3,4)/crop(bottom,100,100)/cropsides/flip(both)/gray/height(100)/negate/rotate(90)/width(100)/workspace/image.jpg', $src);
     }
 }
